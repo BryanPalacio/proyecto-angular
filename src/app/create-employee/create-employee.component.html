@@ -1,0 +1,53 @@
+<div class="container">
+    <h1>New Employee</h1>
+
+    <form (submit)="saveEmployee()">
+        <div class="form-group">
+            <label for="user">User</label>
+            <input type="text" class="form-control" id="user" [(ngModel)]="employee.user" name="user"
+                placeholder="Enter user">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" [(ngModel)]="employee.password" name="password"
+                placeholder="Enter password">
+        </div>
+        <div class="form-group">
+            <label for="docType">Document Type</label>
+            <select class="form-control" id="docType" [(ngModel)]="employee.docType" name="docType">
+                <option value="passport">Passport</option>
+                <option value="idCard">ID Card</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" [(ngModel)]="employee.firstName" name="firstName"
+                placeholder="Enter first name">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" [(ngModel)]="employee.lastName" name="lastName"
+                placeholder="Enter last name">
+        </div>
+        <div class="form-group">
+            <label for="entryDate">Entry Date</label>
+            <input type="date" class="form-control" id="entryDate" [(ngModel)]="employee.entryDate" name="entryDate">
+        </div>
+        <div class="form-group">
+            <label for="contractType">Contract Type</label>
+            <input type="text" class="form-control" id="contractType" [(ngModel)]="employee.contractType"
+                name="contractType" placeholder="Enter contract type">
+        </div>
+        <div class="form-group">
+            <label for="employeeStatus">Employee Status</label>
+            <input type="text" class="form-control" id="employeeStatus" [(ngModel)]="employee.employeeStatus"
+                name="employeeStatus" placeholder="Enter employee status">
+        </div>
+        <div class="form-group">
+            <label for="immediateSup">Immediate Supervisor</label>
+            <input type="text" class="form-control" id="immediateSup" [(ngModel)]="employee.immediateSup"
+                name="immediateSup" placeholder="Enter immediate supervisor">
+        </div>
+        <button type="submit" class="btn btn-primary">Crear Empleado</button>
+    </form>
+</div>

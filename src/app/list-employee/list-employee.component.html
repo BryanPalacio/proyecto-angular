@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>Listado de Empleados</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Password</th>
+                <th>Doc Type</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Entry Date</th>
+                <th>Contract Type</th>
+                <th>Employee Status</th>
+                <th>Immediate Supervisor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{ employee.user }}</td>
+                <td>{{ employee.password }}</td>
+                <td>{{ employee.docType }}</td>
+                <td>{{ employee.firstName }}</td>
+                <td>{{ employee.lastName }}</td>
+                <td>{{ employee.entryDate }}</td>
+                <td>{{ employee.contractType }}</td>
+                <td>{{ employee.employeeStatus }}</td>
+                <td>{{ employee.immediateSupervisor }}</td>
+                <td>
+                    <button class="btn btn-primary" (click)="editEmployee(employee.id)">Editar</button>
+                    </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
